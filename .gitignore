@@ -1,4 +1,5 @@
 *.o
 *.linkfile
 *.bin
+*.sym
 *.sfc
