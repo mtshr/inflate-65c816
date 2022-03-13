@@ -15,6 +15,17 @@ The decompression code written in 65c816. The code is originally written for Sup
 - The interruption may occur during the decompression if handled appropriately.
 - As the inflate routine is located on RAM, once you assemble the inflate.asm in /src directory, you can just include inflate.ram.bin into your source code with your favourite assembler.
 
+## Usage
+
+- Set the RAM address where you want to locate inflate routine in `/src/inflate.inc`
+- Assemble `/src/inflate.asm`, which outputs inflate.ram.bin
+- Include inflate.ram.bin in the your source code and write the code to copy the binary onto the same RAM address where you first configured.
+- Include deflated-data with [zopfli](https://github.com/google/zopfli) with the `--deflate` option
+- Call `JSL Inflate` with the condition:
+  - A : source bank << 8 | destination bank
+  - X : source address
+  - Y : destination address
+
 ## Example
 
 The SuperFamicom homebrew ROM is provided as an example. To assemble, run the following:
