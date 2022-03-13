@@ -4,4 +4,4 @@
 
 ; must be in the same bank as the routine.
 ; requires 0x46A bytes
-.DEFINE InflateVariable $7E55DB
+.DEFINE InflateVariable $7E568B
