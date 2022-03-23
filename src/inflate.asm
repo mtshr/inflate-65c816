@@ -272,7 +272,7 @@ Dynamic:
 
 		phx
 		lda #$0003
-		jsr Read1_5bits					; calling subroutine is slow, but here is executed 19 tiems at maximum, so rather save the code size here
+		jsr Read1_5bits					; calling subroutine is slow, but here is executed 19 times at maximum, so rather save the code size here
 		plx
 		sep #$20
 		and #%111
